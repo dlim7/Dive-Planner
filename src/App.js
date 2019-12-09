@@ -10,8 +10,8 @@ const graphData = [{ x: 1, y: 2 },
 
 //Table 1/2 Padi Dive table implementation
 //TODO complete the other Dive group tables abd their corresponding rest time array
-var table1 = [[10, 9, 7, 6, 5, 4, 4, 3, 3, 3, 3],[19, 16, 13, 11, 9, 8, 7, 6, 6, 5, 5, 4], [25, 22, 17, 14, 12, 10, 9, 8, 7, 6, 5, 5], [29, 25, 19, 16, 13, 11, 10, 9, 8, 7, 7, 6]];
-var table2 = [[300],[47, 348],[21, 109, 410], [8, 30, 118, 419]];
+var table1 = [[10, 9, 7, 6, 5, 4, 4, 3, 3, 3, 3, 3],[19, 16, 13, 11, 9, 8, 7, 6, 6, 5, 5, 4], [25, 22, 17, 14, 12, 10, 9, 8, 7, 6, 5, 5], [29, 25, 19, 16, 13, 11, 10, 9, 8, 7, 7, 6], [32, 27, 21, 17, 15, 13, 11, 10, 9, 8, 7, 7], [36, 31, 24, 19, 16, 14, 12, 11, 10, 9, 8, 8], [40, 34, 26, 21, 18, 15, 13, 12, 11, 10, 9], [44, 37, 28, 23, 19, 17, 15, 13, 12, 11, 10], [48, 40, 31, 25, 21, 18, 16, 14, 13, 11],  [52, 44, 33, 27, 22, 19, 17, 15, 13, 12], [57, 48, 36, 29, 24, 21, 18, 16, 14, 13], [62, 51, 39, 31, 26, 22, 19, 17, 15], [67, 55, 41, 33, 27, 23, 21, 18, 16], [73, 60, 44, 35, 29, 25, 22, 19], [79, 64, 47, 37, 31, 26, 23, 20], [85, 69, 50, 39, 33, 28, 24], [92, 74, 53, 42, 35, 29, 25], [100, 79, 57, 44, 36, 30], [108, 85, 60, 47, 38], [117, 91, 63, 49, 40], [127, 97, 67, 52], [139, 104, 71, 54], [152, 111, 75, 55], [168, 120, 80], [188, 129], [205, 140]];
+var table2 = [[300],[348, 47],[410, 109, 21], [419, 118, 30, 8], [428, 127, 38, 16, 7], [435, 134, 46, 24, 15, 7], [442, 141, 53, 31, 22, 13, 6], [448, 147, 59, 37, 28, 20, 12, 5], [454, 153, 105, 43, 34, 26, 18, 11, 5], [500, 159, 111, 49, 40, 31, 24, 17, 11, 5], [505, 204, 116, 54, 45, 37, 29, 22, 16, 10, 4], [510, 209, 121, 59, 50, 42, 34, 27, 21, 15, 9, 4], [515, 214, 125, 104, 55, 46, 39, 32, 25, 19, 14, 9, 4], [519, 218, 130, 108, 59, 51, 43, 36, 30, 24, 18, 13, 8, 3], [524, 223, 134, 112, 103, 55, 47, 41, 34, 28, 23, 17, 12, 8, 3], [528, 227, 138, 116, 107, 59, 51, 45, 38, 32, 27, 21, 16, 12, 7, 3], [531, 230, 142, 120, 111, 103, 55, 48, 42, 36, 30, 25, 20, 16, 11, 7, 3], [535, 234, 146, 124, 115, 107, 59, 52, 46, 40, 34, 29, 24, 19, 15, 11, 7, 3], [539, 238, 149, 127, 118, 110, 103, 56, 49, 43, 38, 32, 27, 23, 18, 14, 10, 6, 3], [542, 241, 153, 131, 122, 113, 106, 59, 53, 47, 41, 36, 31, 26, 22, 17, 13, 10, 6, 2], [545, 244, 156, 134, 125, 117, 109, 102, 56, 50, 44, 39, 34, 29, 25, 21, 17, 13, 9, 6, 2], [548, 247, 159, 137, 128, 120, 112, 105, 59, 53, 47, 42, 37, 33, 28, 24, 20, 16, 12, 9, 5, 2], [551, 250, 202, 140, 131, 123, 115, 108, 102, 56, 50, 45, 40, 36, 31, 27, 23, 19, 15, 12, 8, 5, 2], [554, 253, 205, 143, 134, 126, 118, 111, 105, 59, 53, 48, 43, 39, 34, 30, 26, 22, 18, 15, 11, 8, 5, 2], [557, 256, 208, 146, 137, 129, 121, 114, 108, 102, 56, 51, 46, 41, 37, 33, 29, 25, 21, 18, 14, 11, 8, 5, 2], [600, 259, 211, 149, 140, 131, 124, 117, 111, 105, 59, 54, 49, 44, 40, 35, 31, 28, 24, 20, 17, 14, 11, 8, 5, 2]];
 
 //Table 3 Padi Dive table implementation
 //TODO complete the arrays for each depth and complete this example depth array of 35 feet
@@ -20,6 +20,9 @@ var table3 = ["Z", 205, null, "Y", 188, 17, "X", 168, 37, "W", 152, 53, "V", 139
 
 var row = null;
 var col = null;
+var residual = 0;
+var hold = null;
+var hold1 = null;
 
 //sets row to corresponding row in table 1 from group input, returns false if invalid
 function getR(r){
@@ -114,13 +117,10 @@ function getR1(col, t){
     console.log(table1[i][col]);
     return i;
   }
-
   i++;
   }
   return false;
 }
-
-
 //sets column to corresponding column in table 1 from depth input, returns false if invalid
 function getC(c){
   if (c <= 35){
@@ -162,7 +162,7 @@ function getC(c){
   else
     return false;
 }
-//returns 
+//returns Pressure group letter from table 1
 function surfaceGroup(x){
   if (x == 0){
     return "A";
@@ -245,6 +245,10 @@ function surfaceGroup(x){
   else
     return false;
 }
+//returns residual nitrogen time to add to actual bottom time inputted as time, g = group
+function getResidual(g){
+  return table1[g][col]
+}
 function App (props) {
   return (
     <div className="App">
@@ -307,7 +311,36 @@ class DataForm extends React.Component {
     `});
 
     getC(this.state.depth);
-    this.setState({nextG: surfaceGroup(getR1(col, this.state.time))});
+    //if this is not initial dive
+    getR(this.state.group);
+    var test1 = row;
+    if (this.state.group != ""){
+      hold1 = row;
+      residual = getResidual(test1);
+    }
+    console.log("time"+this.state.time);
+    console.log("residual"+residual);
+    let newTime = parseInt(this.state.time) + residual;
+    console.log(newTime);
+    newTime = newTime.toString();
+    console.log("string"+newTime);
+    this.setState({time: newTime});
+    console.log("time"+this.state.time);
+    var test = surfaceGroup(getR1(col, newTime));
+    console.log("surface"+test)
+    console.log(this.state.nextG);
+    var rtest = this.state.rest;
+    if (this.state.rest > 0){
+      getR(test);
+      var i = 0;
+      while (rtest < table2[row][i]) {
+        i++;
+      }
+      hold = surfaceGroup(i-1);
+    }
+    else
+      hold = test;
+    console.log(hold);
   }
   render() {
     return (
@@ -328,7 +361,7 @@ class DataForm extends React.Component {
         <br/>
         {this.state.out}
         <br/>
-        <b>Next group: {this.state.nextG}</b>
+        <b>Next group: {hold}</b>
         <br/>
 
       </form>
